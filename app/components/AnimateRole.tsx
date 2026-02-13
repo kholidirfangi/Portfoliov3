@@ -17,7 +17,7 @@ export default function AnimatedRole({
     "Next.js Developer",
     "UI/UX Enthusiast",
   ],
-  
+
   delayPerWord = 0.15, // Dalam detik untuk Framer Motion
   stayDuration = 2500,
   className = "",
@@ -30,7 +30,6 @@ export default function AnimatedRole({
   useEffect(() => {
     // words.length memastikan semua kata sudah muncul sebelum ganti role
     const totalAnimationTime = words.length * delayPerWord * 1000;
-    
 
     const timer = setTimeout(() => {
       setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
@@ -42,6 +41,7 @@ export default function AnimatedRole({
     delayPerWord,
     stayDuration,
     roles.length,
+    words.length,
   ]);
 
   return (
