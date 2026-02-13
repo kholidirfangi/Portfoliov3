@@ -1,4 +1,4 @@
-import About from "./components/About";
+import Hero from "./components/Hero";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
@@ -7,7 +7,7 @@ import Services from "./components/Services";
 export default function Home() {
   return (
     <main>
-      <About />
+      <Hero />
       <Services />
       <Projects />
       <Blog />
