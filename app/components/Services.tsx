@@ -175,7 +175,7 @@ const Services = () => {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Dari landing page sederhana hingga Website kompleks, saya siap
+            Dari landing page sederhana hingga website kompleks, saya siap
             wujudkan visi digital Anda dengan teknologi terkini
           </p>
 
