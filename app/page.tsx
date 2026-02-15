@@ -3,11 +3,13 @@ import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import About from "./components/About";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
       <Services />
       <Projects />
       <Blog />
