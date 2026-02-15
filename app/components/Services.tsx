@@ -164,9 +164,7 @@ const Services = () => {
             className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full"
           >
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-blue-400 font-semibold">
-              Layanan Saya
-            </span>
+            <span className="text-blue-400 font-semibold">Layanan Saya</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -177,7 +175,7 @@ const Services = () => {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Dari landing page sederhana hingga e-commerce kompleks, saya siap
+            Dari landing page sederhana hingga Website kompleks, saya siap
             wujudkan visi digital Anda dengan teknologi terkini
           </p>
 
@@ -270,7 +268,8 @@ const Services = () => {
             </span>
           </h3>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Dari konsultasi hingga peluncuran, setiap tahap dirancang untuk hasil maksimal
+            Dari konsultasi hingga peluncuran, setiap tahap dirancang untuk
+            hasil maksimal
           </p>
 
           <div className="relative">
