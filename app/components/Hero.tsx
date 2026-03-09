@@ -37,15 +37,26 @@ const About = () => {
       </div>
 
       {/* right side */}
-      <div className="w-full xl:w-1/2 flex justify-center items-center">
-        <Image
-          src="/saitama1.png"
-          width={350}
-          height={350}
-          alt="avatar"
-          className="md:ml-20"
-        />
-      </div>
+      <motion.div
+        className="w-full xl:w-1/2 flex justify-center items-center scale-125"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      >
+        <motion.div
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        >
+          <Image
+            src="/profile.png"
+            width={350}
+            height={350}
+            alt="avatar"
+            className="md:ml-20"
+          />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

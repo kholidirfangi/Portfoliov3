@@ -260,7 +260,7 @@ const About = () => {
         </motion.div>
 
         {/* Mari Bicara Jujur */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={guaranteeView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.4 }}
@@ -325,7 +325,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Ajakan Bertindak */}
         <motion.div

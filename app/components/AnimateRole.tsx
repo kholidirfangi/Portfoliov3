@@ -10,12 +10,7 @@ interface AnimatedRoleProps {
 }
 
 export default function AnimatedRole({
-  roles = [
-    "Frontend Developer",
-    "React Specialist",
-    "Next.js Developer",
-    "UI/UX Enthusiast",
-  ],
+  roles = ["Web Developer", "Next.js Developer", "UI/UX Enthusiast"],
   stayDuration = 3000,
   className = "",
 }: AnimatedRoleProps) {
@@ -30,18 +25,20 @@ export default function AnimatedRole({
   }, [roles.length, stayDuration]);
 
   return (
-    <div className={`xl:min-h-[100] flex items-center justify-start mb-3 ${className}`}>
+    <div
+      className={`xl:min-h-[100] flex items-center justify-start mb-3 ${className}`}
+    >
       <AnimatePresence mode="wait">
         <motion.h1
           key={currentRoleIndex}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          transition={{ 
+          transition={{
             duration: 0.5,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
-          className="text-2xl md:text-5xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"
+          className="text-3xl md:text-5xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"
         >
           {roles[currentRoleIndex]}
         </motion.h1>

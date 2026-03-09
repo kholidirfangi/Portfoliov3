@@ -1,5 +1,5 @@
 import Hero from "./components/Hero";
-import Blog from "./components/Blog";
+// import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
@@ -12,7 +12,7 @@ export default function Home() {
       <About />
       <Services />
       <Projects />
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
       {/* decoration */}
       <div className="w-[250] h-[250] bg-radial from-cyan-100 to-blue-200 rounded-full fixed blur-3xl -top-20 -left-10 -z-10" />

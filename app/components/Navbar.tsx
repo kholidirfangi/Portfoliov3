@@ -22,14 +22,12 @@ const Navbar = () => {
   useMotionValueEvent(scrollY, "change", (current) => {
     const previous = scrollY.getPrevious() ?? 0;
 
-    // Hide navbar on scroll down
     if (current > previous && current > 150) {
       setHidden(true);
     } else {
       setHidden(false);
     }
 
-    // Add backdrop blur when scrolled
     if (current > 50) {
       setScrolled(true);
     } else {
@@ -46,12 +44,11 @@ const Navbar = () => {
     { name: "Tentang", href: "#about" },
     { name: "Layanan", href: "#services" },
     { name: "Proyek", href: "#projects" },
-    { name: "Blog", href: "#blog" },
+    // { name: "Blog", href: "#blog" },
   ];
 
   return (
     <>
-      {/* Desktop & Mobile Navbar */}
       <motion.nav
         animate={{ y: hidden ? "-150%" : "0%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -66,9 +63,8 @@ const Navbar = () => {
               <div className="relative">
                 <div className="absolute left-1/2 -translate-x-1/2 inset-0 bg-linear-to-r from-blue-400 to-cyan-400 rounded-full blur group-hover:blur-md transition-all" />
                 <div className="h-12 w-12 bg-linear-to-r from-blue-400 to-cyan-400 rounded-full">
-                  {/* <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white" /> */}
                   <Image
-                    className="absolute left-1/2 top-1/2 -translate-1/2 "
+                    className="absolute left-1/2 top-1/2 -translate-1/2"
                     src="/logoku.png"
                     width={35}
                     height={35}
@@ -83,20 +79,36 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  onClick={() => setActiveSection(item.href.substring(1))}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                    activeSection === item.href.substring(1)
-                      ? "bg-linear-to-r from-blue-400 to-cyan-400 text-white shadow-lg shadow-blue-500/50"
-                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-400"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item, index) => {
+                const isActive = activeSection === item.href.substring(1);
+                return (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    onClick={() => setActiveSection(item.href.substring(1))}
+                    className={`relative px-4 py-2 font-medium transition-colors duration-200 ${
+                      isActive
+                        ? "text-blue-400"
+                        : "text-gray-700 hover:text-blue-400"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+
+                    {/* Sliding underline */}
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-underline"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 shadow-sm shadow-blue-400/50"
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* CTA Button - Desktop */}
@@ -160,7 +172,6 @@ const Navbar = () => {
                   </motion.div>
                 ))}
 
-                {/* CTA Button - Mobile */}
                 <motion.a
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -177,7 +188,6 @@ const Navbar = () => {
         </AnimatePresence>
       </motion.nav>
 
-      {/* Spacer to prevent content from going under navbar */}
       <div className="h-16 md:h-20" />
     </>
   );

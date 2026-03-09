@@ -6,13 +6,13 @@ import { useRef } from "react";
 import {
   Code2,
   Smartphone,
-  Palette,
   Zap,
-  ShoppingCart,
-  BarChart3,
   Sparkles,
   ArrowRight,
   Check,
+  Building2,
+  Briefcase,
+  Gauge,
 } from "lucide-react";
 
 const Services = () => {
@@ -28,32 +28,6 @@ const Services = () => {
 
   const services = [
     {
-      icon: <Code2 className="w-8 h-8" />,
-      title: "Website Development",
-      description:
-        "Website modern dengan teknologi terkini: Next.js, React, TypeScript",
-      features: [
-        "Responsive di semua perangkat",
-        "SEO-optimized",
-        "Loading cepat & performa tinggi",
-        "Code clean & maintainable",
-      ],
-      popular: true,
-    },
-    // {
-    //   icon: <ShoppingCart className="w-8 h-8" />,
-    //   title: "E-Commerce Solutions",
-    //   description:
-    //     "Toko online lengkap dengan sistem pembayaran dan manajemen produk",
-    //   features: [
-    //     "Integrasi payment gateway",
-    //     "Admin dashboard",
-    //     "Tracking order real-time",
-    //     "Mobile-friendly checkout",
-    //   ],
-    //   popular: false,
-    // },
-    {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Landing Page",
       description:
@@ -66,20 +40,47 @@ const Services = () => {
       ],
       popular: false,
     },
-    // {
-    //   icon: <Palette className="w-8 h-8" />,
-    //   title: "UI/UX Design",
-    //   description: "Desain antarmuka yang intuitif dan user-friendly",
-    //   features: [
-    //     "Wireframe & prototype",
-    //     "User flow optimization",
-    //     "Modern aesthetic",
-    //     "Accessibility standard",
-    //   ],
-    //   popular: false,
-    // },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Code2 className="w-8 h-8" />,
+      title: "Custom Website",
+      description:
+        "Website modern dengan teknologi terkini: Next.js, React, TypeScript",
+      features: [
+        "Responsive di semua perangkat",
+        "SEO-optimized",
+        "Loading cepat & performa tinggi",
+        "Code clean & maintainable",
+      ],
+      popular: true,
+    },
+    {
+      icon: <Building2 className="w-8 h-8" />,
+      title: "Website Company Profile",
+      description:
+        "Website profesional untuk tingkatkan kepercayaan klien Anda",
+      features: [
+        "Desain profesional & elegan",
+        "Profil perusahaan lengkap",
+        "Halaman produk & layanan",
+        "Form kontak & peta lokasi",
+      ],
+      popular: false,
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "Website Portfolio",
+      description:
+        "Tampilkan karya terbaik Anda dengan website portfolio yang memukau",
+      features: [
+        "Galeri proyek interaktif",
+        "About me & skill section",
+        "Testimonial & pengalaman",
+        "Contact & social media link",
+      ],
+      popular: false,
+    },
+    {
+      icon: <Gauge className="w-8 h-8" />,
       title: "Website Optimization",
       description: "Tingkatkan performa website existing Anda",
       features: [
@@ -90,18 +91,6 @@ const Services = () => {
       ],
       popular: false,
     },
-    // {
-    //   icon: <BarChart3 className="w-8 h-8" />,
-    //   title: "Dashboard & Admin Panel",
-    //   description: "Panel admin untuk kelola data dan konten dengan mudah",
-    //   features: [
-    //     "Data visualization",
-    //     "CRUD operations",
-    //     "User management",
-    //     "Real-time updates",
-    //   ],
-    //   popular: false,
-    // },
   ];
 
   const techStack = [
