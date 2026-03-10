@@ -6,7 +6,6 @@ import { useRef } from "react";
 import {
   Code2,
   Smartphone,
-  Zap,
   Sparkles,
   ArrowRight,
   Check,

@@ -10,8 +10,9 @@ import {
   Palette,
   Zap,
   Filter,
-  Github,
+  Briefcase,
 } from "lucide-react";
+import Image from "next/image";
 
 const Projects = () => {
   const headerRef = useRef(null);
@@ -28,107 +29,85 @@ const Projects = () => {
 
   const categories = [
     { name: "All", icon: <Sparkles className="w-4 h-4" /> },
-    { name: "Website", icon: <Code2 className="w-4 h-4" /> },
+    { name: "Website Portfolio", icon: <Briefcase className="w-4 h-4" /> },
     { name: "E-Commerce", icon: <Zap className="w-4 h-4" /> },
     { name: "Landing Page", icon: <Palette className="w-4 h-4" /> },
   ];
 
   const projects = [
     {
-      title: "Modern E-Commerce Platform",
-      category: "E-Commerce",
-      description:
-        "Platform e-commerce lengkap dengan payment gateway, admin dashboard, dan real-time inventory management",
-      image: "/projects/ecommerce.jpg", // Ganti dengan path image Anda
-      tags: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-      demoUrl: "#",
-      githubUrl: "#",
+      title: "Photocopy Amanah Jaya",
+      category: "Landing Page & dashboard",
+      description: "Landing Page Toko Fotocopy dengan dashboard inventori",
+      image: "/amnh.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwindcss",
+        "Framer Motion",
+        "Supabase",
+      ],
+      demoUrl: "https://amanah-jaya.vercel.app/",
       featured: true,
-      stats: {
-        duration: "4 Minggu",
-        client: "Retail Store",
-        year: "2024",
-      },
     },
     {
-      title: "SaaS Landing Page",
+      title: "Bearasa Restaurant",
       category: "Landing Page",
       description:
-        "Landing page modern untuk produk SaaS dengan animasi smooth dan conversion-focused design",
-      image: "/projects/saas.jpg",
-      tags: ["React", "Tailwind", "Framer Motion"],
-      demoUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      stats: {
-        duration: "1 Minggu",
-        client: "Tech Startup",
-        year: "2024",
-      },
-    },
-    {
-      title: "Corporate Website",
-      category: "Website",
-      description:
-        "Website perusahaan dengan CMS, blog system, dan contact form terintegrasi",
-      image: "/projects/corporate.jpg",
-      tags: ["Next.js", "Sanity CMS", "SEO"],
-      demoUrl: "#",
-      githubUrl: "#",
+        "Landing Page Restaurant dan Cafe Bearasa yang menampilkan informasi Restaurant",
+      image: "/restaurant.png",
+      tags: ["Next.js", "TypeScript", "Tailwindcss", "Framer Motion"],
+      demoUrl: "https://restaurant-nine-taupe-11.vercel.app/",
       featured: false,
-      stats: {
-        duration: "3 Minggu",
-        client: "Consulting Firm",
-        year: "2024",
-      },
     },
     {
-      title: "Restaurant Menu App",
-      category: "Website",
+      title: "Melon Prime",
+      category: "Landing Page",
       description:
-        "Aplikasi menu digital dengan QR code ordering dan real-time kitchen display",
-      image: "/projects/restaurant.jpg",
-      tags: ["React", "Firebase", "QR Code"],
-      demoUrl: "#",
-      githubUrl: "#",
+        "Landing Page Kebun Melon Premium. Menampilkan nformasi layanan usaha perkebunan melon",
+      image: "/mp.png",
+      tags: ["Next.js", "TypeScript", "Tailwindcss", "Framer Motion"],
+      demoUrl: "https://melon-prime.vercel.app/",
       featured: false,
-      stats: {
-        duration: "2 Minggu",
-        client: "Local Restaurant",
-        year: "2024",
-      },
     },
     {
-      title: "Fitness Tracker Dashboard",
-      category: "Website",
-      description:
-        "Dashboard untuk tracking workout, nutrition, dan progress dengan data visualization",
-      image: "/projects/fitness.jpg",
-      tags: ["Next.js", "Chart.js", "PostgreSQL"],
-      demoUrl: "#",
-      githubUrl: "#",
-      featured: false,
-      stats: {
-        duration: "3 Minggu",
-        client: "Personal Project",
-        year: "2024",
-      },
-    },
-    {
-      title: "Event Ticketing Platform",
+      title: "Caffe Shop Web App",
       category: "E-Commerce",
+      description: "Web Aplikasi untuk mengelola pesanan pelanggan",
+      image: "/cart.png",
+      tags: ["Vite", "React", "Tailwindcss"],
+      demoUrl: "https://caffe-shop-one.vercel.app/",
+      featured: false,
+    },
+    {
+      title: "Portfolio Designer Grafis",
+      category: "Web Portfolio",
       description:
-        "Platform penjualan tiket event dengan seat selection dan e-ticket generation",
-      image: "/projects/ticketing.jpg",
-      tags: ["Next.js", "Stripe", "PDF Generation"],
-      demoUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      stats: {
-        duration: "5 Minggu",
-        client: "Event Organizer",
-        year: "2024",
-      },
+        "Website Portfolio Designer Grafis untuk menunjukkan hasil karya yang telah dibuat dengan pop up jumlah antrean",
+      image: "/portfolio-salis.png",
+      tags: ["Vite", "React", "Tailwindcss", "Firebase"],
+      demoUrl: "https://caffe-shop-one.vercel.app/",
+      featured: false,
+    },
+    {
+      title: "Kasir Web App",
+      category: "Web Application",
+      description:
+        "Website Aplikasi Kasir untuk membantu transaksi jual beli lebih mudah dan cepat",
+      image: "/ksr.png",
+      tags: ["Vite", "React", "Tailwindcss"],
+      demoUrl: "https://kasir-flame.vercel.app/",
+      featured: false,
+    },
+    {
+      title: "Weather App",
+      category: "Web Application",
+      description:
+        "Website Ramalan cuaca yang menampilkan data perkiraaan cuaca di seluruh kota di dunia",
+      image: "/weather.png",
+      tags: ["Vite", "React", "Tailwindcss"],
+      demoUrl: "https://weather-app-amber-seven-14.vercel.app/",
+      featured: false,
     },
   ];
 
@@ -229,17 +208,17 @@ const Projects = () => {
               {/* Image Container */}
               <div className="relative h-64 bg-linear-to-br from-blue-50 to-cyan-50 overflow-hidden">
                 {/* Placeholder linear jika belum ada image */}
-                <div className="absolute inset-0 bg-linear-to-br from-blue-400/20 to-cyan-400/20 flex items-center justify-center">
+                {/* <div className="absolute inset-0 bg-linear-to-br from-blue-400/20 to-cyan-400/20 flex items-center justify-center">
                   <Code2 className="w-20 h-20 text-blue-400/30" />
-                </div>
+                </div> */}
 
                 {/* Uncomment jika sudah ada image */}
-                {/* <Image
+                <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
-                /> */}
+                />
 
                 {/* Overlay on Hover */}
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -252,15 +231,6 @@ const Projects = () => {
                       title="Live Demo"
                     >
                       <ExternalLink className="w-5 h-5" />
-                    </motion.a>
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      href={project.githubUrl}
-                      className="p-3 bg-white rounded-full text-blue-400 hover:bg-blue-400 hover:text-white transition-colors"
-                      title="Source Code"
-                    >
-                      <Github className="w-5 h-5" />
                     </motion.a>
                   </div>
                 </div>
@@ -280,28 +250,6 @@ const Projects = () => {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {project.description}
                 </p>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-2 mb-4 pb-4 border-b border-gray-100">
-                  <div>
-                    <p className="text-xs text-gray-500">Duration</p>
-                    <p className="text-sm font-semibold text-slate-800">
-                      {project.stats.duration}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">Client</p>
-                    <p className="text-sm font-semibold text-slate-800 truncate">
-                      {project.stats.client}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">Year</p>
-                    <p className="text-sm font-semibold text-slate-800">
-                      {project.stats.year}
-                    </p>
-                  </div>
-                </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
