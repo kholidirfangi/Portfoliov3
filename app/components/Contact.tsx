@@ -106,11 +106,11 @@ const Contact = () => {
   ];
 
   const services = [
-    "Website Development",
     // "E-Commerce Solutions",
     "Landing Page",
+    "Company Profile",
     // "UI/UX Design",
-    "Website Optimization",
+    "Website Portfolio",
     // "Dashboard & Admin Panel",
     "Lainnya",
   ];

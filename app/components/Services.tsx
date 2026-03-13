@@ -37,21 +37,21 @@ const Services = () => {
         "Call-to-action optimization",
         "Analytics integration",
       ],
-      popular: false,
-    },
-    {
-      icon: <Code2 className="w-8 h-8" />,
-      title: "Custom Website",
-      description:
-        "Website modern dengan teknologi terkini: Next.js, React, TypeScript",
-      features: [
-        "Responsive di semua perangkat",
-        "SEO-optimized",
-        "Loading cepat & performa tinggi",
-        "Code clean & maintainable",
-      ],
       popular: true,
     },
+    // {
+    //   icon: <Code2 className="w-8 h-8" />,
+    //   title: "Custom Website",
+    //   description:
+    //     "Website modern dengan teknologi terkini: Next.js, React, TypeScript",
+    //   features: [
+    //     "Responsive di semua perangkat",
+    //     "SEO-optimized",
+    //     "Loading cepat & performa tinggi",
+    //     "Code clean & maintainable",
+    //   ],
+    //   popular: true,
+    // },
     {
       icon: <Building2 className="w-8 h-8" />,
       title: "Website Company Profile",
@@ -78,18 +78,18 @@ const Services = () => {
       ],
       popular: false,
     },
-    {
-      icon: <Gauge className="w-8 h-8" />,
-      title: "Website Optimization",
-      description: "Tingkatkan performa website existing Anda",
-      features: [
-        "Speed optimization",
-        "SEO improvement",
-        "Bug fixing",
-        "Security enhancement",
-      ],
-      popular: false,
-    },
+    // {
+    //   icon: <Gauge className="w-8 h-8" />,
+    //   title: "Website Optimization",
+    //   description: "Tingkatkan performa website existing Anda",
+    //   features: [
+    //     "Speed optimization",
+    //     "SEO improvement",
+    //     "Bug fixing",
+    //     "Security enhancement",
+    //   ],
+    //   popular: false,
+    // },
   ];
 
   const techStack = [

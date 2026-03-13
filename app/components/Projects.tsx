@@ -6,11 +6,10 @@ import { useRef, useState } from "react";
 import {
   ExternalLink,
   Sparkles,
-  Code2,
   Palette,
-  Zap,
   Filter,
   Briefcase,
+  Building2,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -30,14 +29,14 @@ const Projects = () => {
   const categories = [
     { name: "All", icon: <Sparkles className="w-4 h-4" /> },
     { name: "Website Portfolio", icon: <Briefcase className="w-4 h-4" /> },
-    { name: "E-Commerce", icon: <Zap className="w-4 h-4" /> },
+    { name: "Company Profile", icon: <Building2 className="w-4 h-4" /> },
     { name: "Landing Page", icon: <Palette className="w-4 h-4" /> },
   ];
 
   const projects = [
     {
       title: "Photocopy Amanah Jaya",
-      category: "Landing Page & dashboard",
+      category: "Landing Page",
       description: "Landing Page Toko Fotocopy dengan dashboard inventori",
       image: "/amnh.png",
       tags: [
