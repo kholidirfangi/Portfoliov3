@@ -35,6 +35,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Furniturs",
+      category: "Company Profile",
+      description: "Website Kompany Profile PT. Furniturs Indonesia",
+      image: "/furniturs.png",
+      tags: ["Next.js", "TypeScript", "Tailwindcss", "Framer Motion"],
+      demoUrl: "https://furniturs.vercel.app/",
+      featured: true,
+    },
+    {
       title: "Photocopy Amanah Jaya",
       category: "Landing Page",
       description: "Landing Page Toko Fotocopy dengan dashboard inventori",
