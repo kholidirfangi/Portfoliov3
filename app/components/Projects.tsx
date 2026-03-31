@@ -89,7 +89,7 @@ const Projects = () => {
     },
     {
       title: "Portfolio Designer Grafis",
-      category: "Web Portfolio",
+      category: "Website Portfolio",
       description:
         "Website Portfolio Designer Grafis untuk menunjukkan hasil karya yang telah dibuat dengan pop up jumlah antrean",
       image: "/portfolio-salis.png",
@@ -97,26 +97,26 @@ const Projects = () => {
       demoUrl: "https://caffe-shop-one.vercel.app/",
       featured: false,
     },
-    {
-      title: "Kasir Web App",
-      category: "Web Application",
-      description:
-        "Website Aplikasi Kasir untuk membantu transaksi jual beli lebih mudah dan cepat",
-      image: "/ksr.png",
-      tags: ["Vite", "React", "Tailwindcss"],
-      demoUrl: "https://kasir-flame.vercel.app/",
-      featured: false,
-    },
-    {
-      title: "Weather App",
-      category: "Web Application",
-      description:
-        "Website Ramalan cuaca yang menampilkan data perkiraaan cuaca di seluruh kota di dunia",
-      image: "/weather.png",
-      tags: ["Vite", "React", "Tailwindcss"],
-      demoUrl: "https://weather-app-amber-seven-14.vercel.app/",
-      featured: false,
-    },
+    // {
+    //   title: "Kasir Web App",
+    //   category: "Web Application",
+    //   description:
+    //     "Website Aplikasi Kasir untuk membantu transaksi jual beli lebih mudah dan cepat",
+    //   image: "/ksr.png",
+    //   tags: ["Vite", "React", "Tailwindcss"],
+    //   demoUrl: "https://kasir-flame.vercel.app/",
+    //   featured: false,
+    // },
+    // {
+    //   title: "Weather App",
+    //   category: "Web Application",
+    //   description:
+    //     "Website Ramalan cuaca yang menampilkan data perkiraaan cuaca di seluruh kota di dunia",
+    //   image: "/weather.png",
+    //   tags: ["Vite", "React", "Tailwindcss"],
+    //   demoUrl: "https://weather-app-amber-seven-14.vercel.app/",
+    //   featured: false,
+    // },
   ];
 
   const filteredProjects =
