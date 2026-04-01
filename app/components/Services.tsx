@@ -55,6 +55,8 @@ const Services = () => {
       popular: true,
       badge: "TERLARIS",
       badgeColor: "from-blue-400 to-cyan-400",
+      whatsapp:
+        "https://api.whatsapp.com/send/?phone=6281384528791&text=Halo%2C+saya+tertarik+dengan+layanan+*Landing+Page*+seharga+Rp+999.000.+Boleh+saya+konsultasi+lebih+lanjut%3F",
     },
     {
       icon: <Building2 className="w-8 h-8" />,
@@ -84,6 +86,8 @@ const Services = () => {
       popular: false,
       badge: "RECOMMENDED",
       badgeColor: "from-violet-500 to-purple-500",
+      whatsapp:
+        "https://api.whatsapp.com/send/?phone=6281384528791&text=Halo%2C+saya+tertarik+dengan+layanan+*Website+Company+Profile*+seharga+Rp+2.999.000.+Boleh+saya+konsultasi+lebih+lanjut%3F",
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
@@ -111,6 +115,8 @@ const Services = () => {
       popular: false,
       badge: null,
       badgeColor: "",
+      whatsapp:
+        "https://api.whatsapp.com/send/?phone=6281384528791&text=Halo%2C+saya+tertarik+dengan+layanan+*Website+Portfolio*+seharga+Rp+1.799.000.+Boleh+saya+konsultasi+lebih+lanjut%3F",
     },
   ];
 
@@ -316,7 +322,9 @@ const Services = () => {
                 ))}
               </ul>
 
-              <motion.button
+              <motion.a
+                href={service.whatsapp}
+                target="_blank"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={`w-full py-3.5 px-4 font-bold rounded-xl flex items-center justify-center gap-2 transition-all text-sm ${
@@ -328,7 +336,7 @@ const Services = () => {
                 <Star className="w-4 h-4" />
                 Mulai Project Ini
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              </motion.a>
             </motion.div>
           ))}
         </motion.div>

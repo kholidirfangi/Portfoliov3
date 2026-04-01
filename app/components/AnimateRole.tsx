@@ -10,7 +10,11 @@ interface AnimatedRoleProps {
 }
 
 export default function AnimatedRole({
-  roles = ["Web Developer", "Next.js Developer", "UI/UX Enthusiast"],
+  roles = [
+    "Web Developer",
+    "Next.js Developer",
+    "UI/UX Enthusiast",
+  ],
   stayDuration = 3000,
   className = "",
 }: AnimatedRoleProps) {

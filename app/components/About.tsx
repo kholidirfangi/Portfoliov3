@@ -181,45 +181,7 @@ const About = () => {
         </motion.div>
 
         {/* Cara Kerja Saya */}
-        <motion.div
-        ref={stepsRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={stepsInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-slate-950 mb-12 text-center">
-            Cara Kerja Saya
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tahapanKerja.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={stepsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                className="relative"
-              >
-                <div className="bg-white backdrop-blur-sm rounded-2xl p-6 transition-all h-full shadow-lg">
-                  <div className="text-6xl font-bold text-blue-500/20 mb-4">
-                    {item.step}
-                  </div>
-                  <h4 className="text-lg font-bold text-slate-800 mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
-
-                {/* Garis penghubung (kecuali item terakhir) */}
-                {index < tahapanKerja.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2">
-                    <div className="w-6 h-0.5 bg-linear-to-r from-blue-500 to-transparent" />
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+       
 
         {/* Jaminan */}
         <motion.div

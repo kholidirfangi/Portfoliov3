@@ -98,7 +98,7 @@ const Navbar = () => {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 shadow-sm shadow-blue-400/50"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-400 to-cyan-400 shadow-sm shadow-blue-400/50"
                         transition={{
                           type: "spring",
                           stiffness: 400,
